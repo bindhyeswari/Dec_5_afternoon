@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="../base.css"/>
+    <script>
+
+        // create 100,000 primes and print it
+        function generatePrimes(numberOfPrimes) {
+            var arr = [], num = 2;
+            while (arr.length < numberOfPrimes) {
+                if ( isPrime(num) ) arr.push(num);
+                num++;
+            }
+            return arr;
+        }
+
+        function isPrime(num) {
+            for (var i = 0; i <= Math.sqrt(num); i++) {
+                if ( num % i < 1 ) return false;
+            }
+            return true;
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+           // document.body.firstElementChild.innerHTML = generatePrimes(15).join(', ')
+            console.log(isPrime(3));
+            console.log(generatePrimes(10));
+        });
+
+    </script>
+</head>
+<body>
+    <div class="primes">
+
+    </div>
+</body>
+</html>
