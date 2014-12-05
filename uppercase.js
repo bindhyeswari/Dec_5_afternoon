@@ -1,4 +1,4 @@
-this.onmessage = function(event) {
+onmessage = function(event) {
     /*var arr = event.data;
     var uppercased = arr.map(function (element) {
         return element.toUpperCase();
@@ -6,5 +6,5 @@ this.onmessage = function(event) {
 
     });*/
     event.data.innerHTML = 'Hello World!';
-    this.postMessage({message: 'done'});
+    postMessage({message: 'done'});
 };
